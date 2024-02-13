@@ -35,7 +35,7 @@ public class FoodReviewDebug : MonoBehaviour
     {
         if (Keyboard.current.rKey.wasPressedThisFrame)
             Review();
-        if (Keyboard.current.tKey.wasPressedThisFrame)
+        if (Keyboard.current.pKey.wasPressedThisFrame)
             DebugPromptLLM();
     }
 
@@ -43,7 +43,17 @@ public class FoodReviewDebug : MonoBehaviour
     {
         var meal = _servingBoard.GetMealOnBoard();
 
+        if (meal.IsEmpty())
+            return;
+        
+        
         var description = meal.GetDescription();
+        
+        Debug.Log($"Meal Description: {description}");
+        
+        description = description.Insert(0, "Meal Description: \n");
+        
+        _streamAPIManager.Prompt(_systemPrompt, description);
     }
 
     private void DebugPromptLLM()

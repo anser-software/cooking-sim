@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fish
   m_EditorClassIdentifier: 
   FoodName: Fish
-  CookingRate: 1
+  CookingRate: 0.0001
   ThresholdCookingTemperature: 50

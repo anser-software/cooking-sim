@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4229142038918981827}
   - component: {fileID: 8717431863877149848}
   - component: {fileID: 9175536136928890943}
+  - component: {fileID: -4524580021390510943}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -129,3 +130,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foodItem: {fileID: 11400000, guid: 213186d56d874834fae50fe6449cc908, type: 2}
+  _temperatureModule: {fileID: -4524580021390510943}
+--- !u!114 &-4524580021390510943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5365131250634724085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce01e79051174c4ba9091949b53a8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

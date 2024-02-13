@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4007668273111302383}
   - component: {fileID: 8395016014863327076}
   - component: {fileID: 7302716061323416770}
+  - component: {fileID: 129310592172721909}
   m_Layer: 0
   m_Name: BeefStake
   m_TagString: Untagged
@@ -129,3 +130,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foodItem: {fileID: 11400000, guid: 409437f356d5f6949acfe9750f820786, type: 2}
+  _temperatureModule: {fileID: 129310592172721909}
+--- !u!114 &129310592172721909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481120469657635427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce01e79051174c4ba9091949b53a8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

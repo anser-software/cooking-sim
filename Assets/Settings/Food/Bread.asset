@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bread
   m_EditorClassIdentifier: 
   FoodName: Bread
-  CookingRate: 1
+  CookingRate: 0.0001
   ThresholdCookingTemperature: 50

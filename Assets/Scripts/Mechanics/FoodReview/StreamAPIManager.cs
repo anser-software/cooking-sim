@@ -110,7 +110,7 @@ public class StreamAPIManager : MonoBehaviour
     
     async UniTaskVoid Start()
     {
-        _api = new OpenAIClient("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");
+        _api = new OpenAIClient("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");
         
         //await UniTask.WaitUntil(() => _systemSetup);
     }

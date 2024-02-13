@@ -9,15 +9,43 @@ public class Meal
         FoodObjects = foodObjects;
     }
 
+    public bool IsEmpty()
+    {
+        return FoodObjects.Count == 0;
+    }
+
     public string GetDescription()
     {
         var description = string.Empty;
+
+        var countPerFoodType = new Dictionary<string, int>();
+        //var descriptionsList = new List<string>();
         
-        foreach (var foodObject in FoodObjects)
+        for (var i = 0; i < FoodObjects.Count; i++)
         {
-            description += foodObject.GetFoodName() + "\n";
-            description += foodObject.GetStateDescription() + "\n";
+            var foodObject = FoodObjects[i];
+            var name = foodObject.GetFoodName() + "\n";
+            var desc = foodObject.GetStateDescription() + "\n";
+            
+            description += "-----------------\n";
+            description += name;
+            description += desc;
+            
+            countPerFoodType[name] = countPerFoodType.GetValueOrDefault(name, 0) + 1;
         }
+        /*
+        for (var i = 0; i < FoodObjects.Count; i++)
+        {
+            var foodObject = FoodObjects[i];
+            var name = foodObject.GetFoodName() + "\n";
+            var desc = foodObject.GetStateDescription() + "\n";
+            
+            description += "-----------------\n";
+            description += name;
+            description += desc;
+            
+            countPerFoodType[name] = countPerFoodType.GetValueOrDefault(name, 0) + 1;
+        }*/
         
         return description;
     }

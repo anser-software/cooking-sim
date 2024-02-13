@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Salami
   m_EditorClassIdentifier: 
   FoodName: Salami
-  CookingRate: 1
+  CookingRate: 0.0001
   ThresholdCookingTemperature: 50
