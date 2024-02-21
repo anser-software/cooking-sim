@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e6d98bc1de41b08ad5212136faf28a, type: 3}
+  m_Name: MeatEating
+  m_EditorClassIdentifier: 
+  Class: {fileID: 11400000, guid: 2b52e3b6ea8fc7d4aa392b311b49fa66, type: 2}
+  PromptBlocks:
+  - {fileID: 11400000, guid: dd61d133240b1964d87ca029ec989da2, type: 2}
+  - {fileID: 11400000, guid: aff6c57762e28fb40aaa686d298049fc, type: 2}

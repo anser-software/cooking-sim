@@ -82,6 +82,7 @@ public class TemperatureService : MonoBehaviour
             return;
         
         _temperatureSources.Remove(source);
+        Destroy(source.gameObject);
     }
     
 }

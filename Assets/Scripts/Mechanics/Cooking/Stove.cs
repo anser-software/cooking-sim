@@ -12,8 +12,6 @@ public class Stove : MonoBehaviour
     [SerializeField] private Transform[] _burners;
 
     private int _burnerIndex;
-
-    //private bool _enabledBurners = true;
     
     private TemperatureSource[] _temperatureSources;
 
@@ -37,7 +35,6 @@ public class Stove : MonoBehaviour
         {
             TemperatureService.Instance.RemoveTemperatureSource(source);
         }
-        //_enabledBurners = !_enabledBurners;
     }
     
 }

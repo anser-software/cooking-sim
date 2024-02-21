@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb9a865af0e4763ba94cd81ac847407, type: 3}
+  m_Name: LovesExperimenting
+  m_EditorClassIdentifier: 
+  Class: {fileID: 11400000, guid: 4dc8f05044423e14fb9cd3a6d4bdf665, type: 2}
+  PromptSegments:
+  - Class: {fileID: 11400000, guid: 4c4d92fc8e7aba843b064df13e0c620b, type: 2}
+    PromptText: "Loves experimenting\r"
+  - Class: {fileID: 11400000, guid: 185c31da81033b14d9b03ce6f2e507f8, type: 2}
+    PromptText: '- May enjoy unusual tastes and combinations
+
+      - Likes when
+      the meal has extra ingredients'
+  - Class: {fileID: 11400000, guid: 2921c1121d3c4ae40a5f39fa78990534, type: 2}
+    PromptText: 
+  - Class: {fileID: 11400000, guid: b9e1a2a12b6b903438d8dd17c1ae099c, type: 2}
+    PromptText: 

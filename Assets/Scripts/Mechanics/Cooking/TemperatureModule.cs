@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
-public class TemperatureModule : MonoBehaviour
+public class TemperatureModule : MonoBehaviour, ITooltipProvider
 {
 
+    [SerializeField] private TooltipPreset _tooltipPreset;
+    
     public float Temperature => _temperature;
 
     private float _temperature;
@@ -21,5 +24,13 @@ public class TemperatureModule : MonoBehaviour
         _temperature += deltaTemperature;
         
         //Debug.Log($"Current Temperature: {_temperature}");
+    }
+
+    
+    public TooltipPreset TooltipPreset => _tooltipPreset;
+
+    public IEnumerable<TooltipBlock> GetTooltipData()
+    {
+        return new []{ new TooltipBlock("Temperature", Mathf.Round(_temperature).ToString(CultureInfo.InvariantCulture) + "°") };
     }
 }

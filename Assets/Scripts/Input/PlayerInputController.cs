@@ -7,27 +7,49 @@ using UnityEngine.InputSystem;
 public class PlayerInputController : MonoBehaviour
 {
     
+    [SerializeField] private GameIOEvents _gameIOEvents;
+    
     private void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            PointerDown();
+            LeftClick();
+        }
+        else if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            RightClick();
         }
     }
 
-    private void PointerDown()
+    private void LeftClick()
     {
-        var rayHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit);
+        var rayHit = CameraRaycast(out var hit);
+
+        if (!rayHit) 
+            return;
+        
+        _gameIOEvents.OnLeftClickOnObject(hit.transform.gameObject);
+            
+        var trigger = hit.collider.GetComponent<PointerDownTrigger>();
+            
+        if (trigger == null)
+            return;
+            
+        trigger.OnPointerDown();
+    }
+    
+    private void RightClick()
+    {
+        var rayHit = CameraRaycast(out var hit);
         
         if (rayHit)
-        {
-            var trigger = hit.collider.GetComponent<PointerDownTrigger>();
-            
-            if (trigger == null)
-                return;
-            
-            trigger.OnPointerDown();
-        }
+            _gameIOEvents.OnRightClickOnObject(hit.transform.gameObject);
+    }
+
+    private bool CameraRaycast(out RaycastHit hitInfo)
+    {
+        return Physics.Raycast(Utility.MainCamera.transform.position, Utility.MainCamera.transform.forward,
+            out hitInfo);
     }
     
 }

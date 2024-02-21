@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class SolidFoodGameObject : FoodGameObject
+public class SolidFoodGameObject : FoodGameObject, ITooltipProvider
 {
-
+    
     [SerializeField] private SolidFoodItem _foodItem;
 
     [SerializeField] private TemperatureModule _temperatureModule;
     
+    [SerializeField] private TooltipPreset _tooltipPreset;
+
     private float _cookingProgress;
     
     private Rigidbody _rb;
@@ -51,5 +53,15 @@ public class SolidFoodGameObject : FoodGameObject
         Debug.Log(GetFoodName());
         Debug.Log($"Cooking Progress: {_cookingProgress * 100F}%");
     }
-    
+
+    public TooltipPreset TooltipPreset => _tooltipPreset;
+
+    public IEnumerable<TooltipBlock> GetTooltipData()
+    {
+        return new[]
+        {
+            new TooltipBlock("", _foodItem.FoodName),
+            new TooltipBlock("Cooking Progress", $"{_cookingProgress * 100F}%")
+        };
+    }
 }

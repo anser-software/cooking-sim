@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb9a865af0e4763ba94cd81ac847407, type: 3}
+  m_Name: IngredientTaskExamples
+  m_EditorClassIdentifier: 
+  Class: {fileID: 11400000, guid: ef5c5faad38ae97449e571a3202adf8f, type: 2}
+  PromptSegments:
+  - Class: {fileID: 11400000, guid: 0f83f6c0f771b274cb02d51df3d427c4, type: 2}
+    PromptText: 'Cook a meal with Fish, Beef and Apple
+
+      Make it special.'
+  - Class: {fileID: 11400000, guid: 0f83f6c0f771b274cb02d51df3d427c4, type: 2}
+    PromptText: "Cook a meal with Banana and Bread.\r\nCan you make it so you can\u2019t
+      taste banana and bread?"
